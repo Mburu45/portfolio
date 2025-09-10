@@ -7,6 +7,7 @@
   <title>Lawrence Mburu | Web Developer</title>
   <link rel="stylesheet" href="css/portfolio.css" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="light-mode">
@@ -15,78 +16,151 @@
       <h1 class="logo">Lawrence Mburu</h1>
       <nav>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+          <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+          <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle">Toggle Theme</button>
+      <button id="theme-toggle"><i class="fas fa-sun"></i></button>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container">
-      <h2>Hello, I'm Lawrence</h2>
+  <div class="container hero-flex">
+    <div class="hero-text">
+      <h2>Hi there, I'm Lawrence</h2>
+      <p>Passionate Web Developer</p>
       <h3><span id="typing-text"></span></h3>
     </div>
-  </section>
+    <div class="hero-image">
+      <img src="images/profile.jpg" alt="Lawrence Mburu Portrait" width="250" height="250" />
+    </div>
+  </div>
+</section>
 
-  <section id="about" class="section fade-up">
+
+  <section id="about" class="section fade-up fade-in">
     <div class="container">
       <h2>About Me</h2>
       <p>I’m a passionate web developer focused on creating engaging and efficient user experiences. I specialize in full-stack development using modern tools and frameworks.</p>
-      <a href="Lawrence-Mburu-Resume.pdf" class="resume-button" download aria-label="Download Resume PDF">Download Resume</a>
+      <a href="docs/Lawrence_Mburu_CV.pdf" class="resume-button" download aria-label="Download Resume PDF"><i class="fas fa-download"></i> Download Resume</a>
     </div>
   </section>
 
-  <section id="skills" class="section">
+  <section id="skills" class="section fade-in">
     <div class="container">
       <h2>Skills</h2>
       <div class="card-grid">
-        <div class="card fade-up"><i class="fab fa-html5"></i> HTML5</div>
-        <div class="card fade-up"><i class="fab fa-css3-alt"></i> CSS3</div>
-        <div class="card fade-up"><i class="fab fa-js"></i> JavaScript (ES6+)</div>
-        <div class="card fade-up"><i class="fab fa-react"></i> React</div>
-        <div class="card fade-up"><i class="fab fa-node-js"></i> Node.js</div>
-        <div class="card fade-up"><i class="fas fa-server"></i> Express.js</div>
-        <div class="card fade-up"><i class="fas fa-database"></i> MySQL</div>
-        <div class="card fade-up"><i class="fas fa-database"></i> MongoDB</div>
-        <div class="card fade-up"><i class="fab fa-github"></i> Git & GitHub</div>
-        <div class="card fade-up"><i class="fas fa-code"></i> APIs / Postman</div>
-        <div class="card fade-up"><i class="fas fa-mobile-alt"></i> Responsive Design</div>
-        <div class="card fade-up"><i class="fas fa-bolt"></i> Toast Notifications</div>
+        <div class="card fade-up">
+          <i class="fab fa-html5"></i> HTML5
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 95%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fab fa-css3-alt"></i> CSS3
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 90%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fab fa-js"></i> JavaScript
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 85%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fab fa-react"></i> React
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 80%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fab fa-node-js"></i> Node.js
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 75%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fas fa-server"></i> Express.js
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 70%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fab fa-php"></i> PHP
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 75%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fas fa-database"></i> MySQL
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 80%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fas fa-database"></i> MongoDB
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 75%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fab fa-github"></i> Git & GitHub
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 85%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fas fa-code"></i> APIs / Postman
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 80%"></div>
+          </div>
+        </div>
+        <div class="card fade-up">
+          <i class="fas fa-mobile-alt"></i> Responsive Design
+          <div class="skill-bar">
+            <div class="skill-fill" style="--skill-level: 90%"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <section id="services" class="section fade-in">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card fade-up">
-          <img loading="lazy" src="images/portfolio-thumb.jpg" alt="Screenshot of personal portfolio project">
-          <h3>Portfolio Website</h3>
-          <p>A responsive personal portfolio with theme toggle, animations, and contact form.</p>
-          <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+      <h2>Services</h2>
+      <div class="service-grid">
+        <div class="service-card fade-up">
+          <i class="fas fa-code"></i>
+          <h3>Custom Web Development</h3>
+          <p>Building tailored websites and web applications using modern technologies like HTML, CSS, JavaScript, and frameworks such as React and Node.js.</p>
+          <a href="#contact" class="service-btn">Get Started</a>
         </div>
-        <div class="project-card fade-up">
-          <img loading="lazy" src="images/ecommerce-thumb.jpg" alt="Screenshot of e-commerce platform">
-          <h3>E-Commerce Store</h3>
-          <p>Full-featured online store using React, Node.js, and MongoDB.</p>
-          <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+        <div class="service-card fade-up">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Responsive Design</h3>
+          <p>Creating mobile-first, responsive designs that look great on all devices, ensuring optimal user experience across desktops, tablets, and smartphones.</p>
+          <a href="#contact" class="service-btn">Get Started</a>
         </div>
-        <div class="project-card fade-up">
-          <img loading="lazy" src="images/blog-thumb.jpg" alt="Screenshot of blog platform">
-          <h3>Blog Platform</h3>
-          <p>Markdown-based blogging platform with authentication and RESTful APIs.</p>
-          <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+        <div class="service-card fade-up">
+          <i class="fas fa-server"></i>
+          <h3>Full-Stack Solutions</h3>
+          <p>Developing end-to-end solutions with backend APIs, databases (MySQL, MongoDB), and seamless integration for robust, scalable applications.</p>
+          <a href="#contact" class="service-btn">Get Started</a>
+        </div>
+        <div class="service-card fade-up">
+          <i class="fas fa-plug"></i>
+          <h3>API Integration</h3>
+          <p>Integrating third-party APIs and building custom RESTful APIs to enhance functionality and connect your application with external services.</p>
+          <a href="#contact" class="service-btn">Get Started</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section fade-up">
+  <section id="contact" class="section fade-up fade-in">
     <div class="container">
       <h2>Contact</h2>
       <form action="https://formspree.io/f/yourformid" method="POST">
@@ -98,15 +172,30 @@
     </div>
   </section>
 
-  <footer class="section">
-    <div class="container">
-      <p>&copy; 2025 Lawrence Mburu</p>
-      <div class="social-icons">
-        <a href="https://github.com/lawrencemburu" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="mailto:lawrence@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>&copy; 2025 <strong>Lawrence Mburu</strong> | Let’s Connect and Create 🚀</p>
     </div>
-  </footer>
+    <div class="footer-right social-icons">
+      <a href="https://github.com/dashboard" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/lawrencemburu" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/" aria-label="instagram" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com/lawrencemburu" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑
+  </button>
+</footer>
 
   <button id="back-to-top">↑</button>
 

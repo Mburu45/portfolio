@@ -4,11 +4,17 @@ const body = document.body;
 themeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   body.classList.toggle("light-mode");
+  const icon = themeToggle.querySelector("i");
+  if (body.classList.contains("dark-mode")) {
+    icon.className = "fas fa-moon";
+  } else {
+    icon.className = "fas fa-sun";
+  }
 });
 
 
 const typingText = document.getElementById("typing-text");
-const roles = ["Full-Stack Web Developer", "React & Node.js Specialist", "Frontend Enthusiast", "Backend Builder"];
+const roles = ["Creative Code Artisan", "Innovative Problem Solver", "Full-Stack Web Developer", "UI/UX Enthusiast"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -39,4 +45,22 @@ window.addEventListener("scroll", () => {
 });
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Fade-in animation on scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
 });
