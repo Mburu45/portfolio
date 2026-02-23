@@ -3,212 +3,312 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Lawrence Mburu, a web developer skilled in HTML, CSS, JavaScript, React, Node.js and more." />
-  <title>Lawrence Mburu | Web Developer</title>
+  <meta
+    name="description"
+    content="Lawrence Mburu - Full-Stack and product-oriented developer building usable, reliable web and mobile systems for real-world constraints."
+  />
+  <title>Lawrence Mburu | Full-Stack Product Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="stylesheet" href="css/portfolio.css" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body class="light-mode">
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Lawrence Mburu</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-          <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-          <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
-          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+<body data-theme="light">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">Lawrence Mburu</a>
+      <nav class="top-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#projects">Case Studies</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <button id="theme-toggle"><i class="fas fa-sun"></i></button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+        <i class="fas fa-sun" aria-hidden="true"></i>
+      </button>
     </div>
   </header>
 
-  <section class="hero">
-  <div class="container hero-flex">
-    <div class="hero-text">
-      <h2>Hi there, I'm Lawrence</h2>
-      <p>Passionate Web Developer</p>
-      <h3><span id="typing-text"></span></h3>
-    </div>
-    <div class="hero-image">
-      <img src="images/profile.jpg" alt="Lawrence Mburu Portrait" width="250" height="250" />
-    </div>
-  </div>
-</section>
-
-
-  <section id="about" class="section fade-up fade-in">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m a passionate web developer focused on creating engaging and efficient user experiences. I specialize in full-stack development using modern tools and frameworks.</p>
-      <a href="docs/Lawrence_Mburu_CV.pdf" class="resume-button" download aria-label="Download Resume PDF"><i class="fas fa-download"></i> Download Resume</a>
-    </div>
-  </section>
-
-  <section id="skills" class="section fade-in">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="card-grid">
-        <div class="card fade-up">
-          <i class="fab fa-html5"></i> HTML5
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 95%"></div>
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal style="--delay: 0ms">
+          <p class="eyebrow">Full-Stack + Product-Oriented Developer</p>
+          <h1>I build practical web and mobile products that stay clear, fast, and reliable in real usage.</h1>
+          <p class="hero-subtitle">
+            From checkout flows to admin systems, I design for non-technical users, low bandwidth, and diverse devices without sacrificing product quality.
+          </p>
+          <p class="typing-line">
+            I focus on <span id="typing-text" aria-live="polite"></span>
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Case Studies</a>
+            <a href="docs/Lawrence_Mburu_CV.pdf" class="btn btn-ghost" download>Download CV</a>
           </div>
+          <ul class="constraint-list" aria-label="Operating constraints I design for">
+            <li>Low-bandwidth networks</li>
+            <li>Non-technical operators</li>
+            <li>Mixed device quality</li>
+          </ul>
         </div>
-        <div class="card fade-up">
-          <i class="fab fa-css3-alt"></i> CSS3
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 90%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fab fa-js"></i> JavaScript
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 85%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fab fa-react"></i> React
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 80%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fab fa-node-js"></i> Node.js
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 75%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fas fa-server"></i> Express.js
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 70%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fab fa-php"></i> PHP
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 75%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fas fa-database"></i> MySQL
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 80%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fas fa-database"></i> MongoDB
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 75%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fab fa-github"></i> Git & GitHub
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 85%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fas fa-code"></i> APIs / Postman
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 80%"></div>
-          </div>
-        </div>
-        <div class="card fade-up">
-          <i class="fas fa-mobile-alt"></i> Responsive Design
-          <div class="skill-bar">
-            <div class="skill-fill" style="--skill-level: 90%"></div>
+        <div class="hero-card" data-reveal style="--delay: 120ms">
+          <img src="images/profile.jpg" alt="Portrait of Lawrence Mburu" width="280" height="280" />
+          <div class="hero-card-meta">
+            <p>Stack coverage</p>
+            <strong>Frontend, Backend, Mobile, UX</strong>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="hero-shape" aria-hidden="true"></div>
+    </section>
 
-  <section id="services" class="section fade-in">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="service-grid">
-        <div class="service-card fade-up">
-          <i class="fas fa-code"></i>
-          <h3>Custom Web Development</h3>
-          <p>Building tailored websites and web applications using modern technologies like HTML, CSS, JavaScript, and frameworks such as React and Node.js.</p>
-          <a href="#contact" class="service-btn">Get Started</a>
+    <section id="about" class="section">
+      <div class="container section-grid">
+        <div data-reveal style="--delay: 0ms">
+          <p class="eyebrow">About</p>
+          <h2>Product decisions first, technology second.</h2>
         </div>
-        <div class="service-card fade-up">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>Responsive Design</h3>
-          <p>Creating mobile-first, responsive designs that look great on all devices, ensuring optimal user experience across desktops, tablets, and smartphones.</p>
-          <a href="#contact" class="service-btn">Get Started</a>
+        <p class="about-text" data-reveal style="--delay: 100ms">
+          I approach engineering as product work: identify friction, simplify the path, and ship systems people can operate confidently.
+          My process blends UI craft, backend structure, and clear feedback loops so users can complete tasks quickly and teams can maintain the system without guesswork.
+        </p>
+      </div>
+    </section>
+
+    <section id="capabilities" class="section capability-section">
+      <div class="container">
+        <div class="section-head" data-reveal style="--delay: 0ms">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Skill clusters built around delivery outcomes</h2>
+          <p>Open each cluster for deeper detail. No inflated percentages, only practical confidence levels.</p>
         </div>
-        <div class="service-card fade-up">
-          <i class="fas fa-server"></i>
-          <h3>Full-Stack Solutions</h3>
-          <p>Developing end-to-end solutions with backend APIs, databases (MySQL, MongoDB), and seamless integration for robust, scalable applications.</p>
-          <a href="#contact" class="service-btn">Get Started</a>
-        </div>
-        <div class="service-card fade-up">
-          <i class="fas fa-plug"></i>
-          <h3>API Integration</h3>
-          <p>Integrating third-party APIs and building custom RESTful APIs to enhance functionality and connect your application with external services.</p>
-          <a href="#contact" class="service-btn">Get Started</a>
+
+        <div class="cluster-grid">
+          <article class="cluster featured" data-reveal style="--delay: 30ms">
+            <button class="cluster-toggle" aria-expanded="true" aria-controls="cluster-product" id="cluster-product-btn">
+              <span>
+                <small>Differentiator</small>
+                <h3>Product, UX & System Thinking</h3>
+              </span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="cluster-panel" id="cluster-product" role="region" aria-labelledby="cluster-product-btn">
+              <ul>
+                <li><span>User-centered workflow design</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Checkout and conversion flow optimization</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Admin dashboards for non-technical users</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Error-state handling and feedback systems</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Low-bandwidth, device-conscious interfaces</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Simplifying complex system behavior</span><span class="confidence production">Production-ready</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cluster" data-reveal style="--delay: 60ms">
+            <button class="cluster-toggle" aria-expanded="false" aria-controls="cluster-frontend" id="cluster-frontend-btn">
+              <span>
+                <small>Web UI</small>
+                <h3>Frontend & UI Engineering</h3>
+              </span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="cluster-panel" id="cluster-frontend" role="region" aria-labelledby="cluster-frontend-btn" hidden>
+              <ul>
+                <li><span>HTML5, CSS3, JavaScript (ES6+)</span><span class="confidence production">Production-ready</span></li>
+                <li><span>React.js and Vue.js</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Responsive design and component-based UI thinking</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Tailwind CSS and Bootstrap</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Theme systems (light and dark mode)</span><span class="confidence production">Production-ready</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cluster" data-reveal style="--delay: 90ms">
+            <button class="cluster-toggle" aria-expanded="false" aria-controls="cluster-backend" id="cluster-backend-btn">
+              <span>
+                <small>Server side</small>
+                <h3>Backend & API Development</h3>
+              </span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="cluster-panel" id="cluster-backend" role="region" aria-labelledby="cluster-backend-btn" hidden>
+              <ul>
+                <li><span>Node.js and Express.js services</span><span class="confidence production">Production-ready</span></li>
+                <li><span>RESTful API design and implementation</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Authentication, authorization, and CRUD systems</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>PHP with Laravel fundamentals</span><span class="confidence improving">Actively Improving</span></li>
+                <li><span>Separation of concerns in app architecture</span><span class="confidence strong">Strong & Comfortable</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cluster" data-reveal style="--delay: 120ms">
+            <button class="cluster-toggle" aria-expanded="false" aria-controls="cluster-data" id="cluster-data-btn">
+              <span>
+                <small>Data layer</small>
+                <h3>Databases & Data Handling</h3>
+              </span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="cluster-panel" id="cluster-data" role="region" aria-labelledby="cluster-data-btn" hidden>
+              <ul>
+                <li><span>MySQL and MongoDB</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Data-driven application design</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Admin dashboards and data management patterns</span><span class="confidence strong">Strong & Comfortable</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cluster" data-reveal style="--delay: 150ms">
+            <button class="cluster-toggle" aria-expanded="false" aria-controls="cluster-mobile" id="cluster-mobile-btn">
+              <span>
+                <small>Cross-platform</small>
+                <h3>Mobile & Cross-Platform Development</h3>
+              </span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="cluster-panel" id="cluster-mobile" role="region" aria-labelledby="cluster-mobile-btn" hidden>
+              <ul>
+                <li><span>Flutter and Dart</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Cross-platform UI design and layout patterns</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Mobile API consumption with clear state handling</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Offline-resilient and lightweight interfaces</span><span class="confidence strong">Strong & Comfortable</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="cluster" data-reveal style="--delay: 180ms">
+            <button class="cluster-toggle" aria-expanded="false" aria-controls="cluster-tools" id="cluster-tools-btn">
+              <span>
+                <small>Execution</small>
+                <h3>Tools & Workflow</h3>
+              </span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="cluster-panel" id="cluster-tools" role="region" aria-labelledby="cluster-tools-btn" hidden>
+              <ul>
+                <li><span>Git and GitHub workflows</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Visual Studio Code</span><span class="confidence production">Production-ready</span></li>
+                <li><span>Chrome DevTools for diagnostics</span><span class="confidence strong">Strong & Comfortable</span></li>
+                <li><span>Debugging and performance awareness</span><span class="confidence production">Production-ready</span></li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="section fade-up fade-in">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Let's discuss your project or just say hello!</p>
-      <form action="send_message.php" method="POST" class="contact-form">
-        <div class="input-group">
-          <i class="fas fa-user"></i>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <section id="projects" class="section project-section">
+      <div class="container">
+        <div class="section-head" data-reveal style="--delay: 0ms">
+          <p class="eyebrow">Case Studies</p>
+          <h2>Systems shaped by user friction and operating constraints</h2>
         </div>
-        <div class="input-group">
-          <i class="fas fa-envelope"></i>
-          <input type="email" id="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="input-group">
-          <i class="fas fa-comment"></i>
-          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
 
-  <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-left">
-      <p>&copy; 2025 <strong>Lawrence Mburu</strong> | Let’s Connect and Create 🚀</p>
-      <p><strong>phone no: +254748201198</strong></p>
+        <div class="project-grid">
+          <article class="project-card priority" data-reveal style="--delay: 40ms">
+            <p class="project-type">E-commerce Platform</p>
+            <h3>Checkout flow redesign for completion reliability</h3>
+            <ul>
+              <li><strong>Problem:</strong> Drop-offs during checkout caused by form friction and unclear errors.</li>
+              <li><strong>UX decisions:</strong> Inline validation, clearer field sequencing, and actionable error feedback.</li>
+              <li><strong>Trade-offs:</strong> Optimized scripts and progressive enhancement to support weak connections.</li>
+              <li><strong>Constraint focus:</strong> Low-bandwidth handling and resilient submit states on unstable networks.</li>
+            </ul>
+            <p class="project-result">Result: smoother conversion path and fewer failed checkout attempts.</p>
+          </article>
+
+          <article class="project-card" data-reveal style="--delay: 90ms">
+            <p class="project-type">Operations Dashboard</p>
+            <h3>Admin experience built for non-technical teams</h3>
+            <ul>
+              <li><strong>Problem:</strong> Staff needed to manage data without developer support.</li>
+              <li><strong>UX decisions:</strong> Task-based navigation, guided actions, and safe defaults.</li>
+              <li><strong>Trade-offs:</strong> Prioritized clarity over visual density for faster onboarding.</li>
+              <li><strong>Constraint focus:</strong> Designed for mixed digital literacy and varied devices.</li>
+            </ul>
+          </article>
+
+          <article class="project-card" data-reveal style="--delay: 140ms">
+            <p class="project-type">Cross-Platform Mobile App</p>
+            <h3>Lightweight field workflow with offline-friendly behavior</h3>
+            <ul>
+              <li><strong>Problem:</strong> Field teams lost progress during intermittent connectivity.</li>
+              <li><strong>UX decisions:</strong> Local-first interactions and delayed sync patterns.</li>
+              <li><strong>Trade-offs:</strong> Kept UI minimal to improve speed on lower-end phones.</li>
+              <li><strong>Constraint focus:</strong> Practical navigation and feedback for real-world usage.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head" data-reveal style="--delay: 0ms">
+          <p class="eyebrow">Services</p>
+          <h2>Problems I solve for product teams</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card" data-reveal style="--delay: 30ms">
+            <h3>Improve task completion</h3>
+            <p>Redesign critical flows like signup, checkout, and data entry so users finish tasks with fewer errors.</p>
+          </article>
+          <article class="service-card" data-reveal style="--delay: 70ms">
+            <h3>Build maintainable full-stack systems</h3>
+            <p>Implement clean frontend and backend boundaries with APIs, auth, and data models teams can evolve safely.</p>
+          </article>
+          <article class="service-card" data-reveal style="--delay: 110ms">
+            <h3>Ship for constrained environments</h3>
+            <p>Create reliable experiences for low bandwidth, low-spec devices, and mixed user technical confidence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div data-reveal style="--delay: 0ms">
+          <p class="eyebrow">Contact</p>
+          <h2>Tell me what is blocking your users today.</h2>
+          <p>I will reply with a practical approach focused on usability, delivery speed, and system reliability.</p>
+        </div>
+        <form action="send_message.php" method="POST" class="contact-form" data-reveal style="--delay: 90ms">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+          <label for="message">Project context</label>
+          <textarea id="message" name="message" rows="5" placeholder="What problem are you trying to solve?" required></textarea>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>&copy; 2026 Lawrence Mburu</p>
+      <div class="social-links" aria-label="Social links">
+        <a href="https://github.com/dashboard" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/lawrencemburu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/lawrencemburu" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <div class="footer-right social-icons">
-      <a href="https://github.com/dashboard" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/lawrencemburu" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.instagram.com/" aria-label="instagram" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://twitter.com/lawrencemburu" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-  </div>
-  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    ↑
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
   </button>
-</footer>
-
-  <button id="back-to-top">↑</button>
 
   <script src="script.js"></script>
 </body>

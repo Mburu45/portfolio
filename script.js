@@ -1,66 +1,132 @@
-const themeToggle = document.getElementById("theme-toggle");
+const THEME_KEY = "portfolio_theme";
+
 const body = document.body;
-
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  body.classList.toggle("light-mode");
-  const icon = themeToggle.querySelector("i");
-  if (body.classList.contains("dark-mode")) {
-    icon.className = "fas fa-moon";
-  } else {
-    icon.className = "fas fa-sun";
-  }
-});
-
-
+const themeToggle = document.getElementById("theme-toggle");
 const typingText = document.getElementById("typing-text");
-const roles = ["Creative Code Artisan", "Innovative Problem Solver", "Full-Stack Web Developer", "UI/UX Enthusiast"];
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+const backToTop = document.getElementById("back-to-top");
 
-function type() {
-  const current = roles[roleIndex];
-  const displayed = isDeleting
-    ? current.substring(0, charIndex--)
-    : current.substring(0, charIndex++);
+function applyTheme(theme) {
+  body.setAttribute("data-theme", theme);
+  const icon = themeToggle?.querySelector("i");
 
-  typingText.textContent = displayed;
-
-  if (!isDeleting && charIndex === current.length) {
-    setTimeout(() => (isDeleting = true), 1500);
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
+  if (icon) {
+    icon.className = theme === "dark" ? "fas fa-moon" : "fas fa-sun";
   }
-
-  setTimeout(type, isDeleting ? 50 : 100);
 }
 
-type();
+function initializeTheme() {
+  const storedTheme = localStorage.getItem(THEME_KEY);
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
 
-const backToTop = document.getElementById("back-to-top");
-window.addEventListener("scroll", () => {
-  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-});
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  applyTheme(initialTheme);
 
-// Fade-in animation on scroll
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+  themeToggle?.addEventListener("click", () => {
+    const nextTheme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    localStorage.setItem(THEME_KEY, nextTheme);
   });
-}, observerOptions);
+}
 
-document.querySelectorAll('.fade-in').forEach(el => {
-  observer.observe(el);
-});
+function initializeTyping() {
+  if (!typingText) {
+    return;
+  }
+
+  const roles = [
+    "usable interfaces that reduce friction",
+    "checkout flows that convert under constraints",
+    "reliable APIs and maintainable systems",
+    "mobile experiences for real-world conditions"
+  ];
+
+  let roleIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function tick() {
+    const phrase = roles[roleIndex];
+    const output = deleting ? phrase.slice(0, charIndex--) : phrase.slice(0, charIndex++);
+
+    typingText.textContent = output;
+
+    if (!deleting && charIndex > phrase.length) {
+      deleting = true;
+      setTimeout(tick, 1300);
+      return;
+    }
+
+    if (deleting && charIndex < 0) {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+
+    setTimeout(tick, deleting ? 38 : 72);
+  }
+
+  tick();
+}
+
+function initializeRevealAnimations() {
+  const revealNodes = document.querySelectorAll("[data-reveal]");
+
+  if (!revealNodes.length) {
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, revealObserver) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -8% 0px"
+    }
+  );
+
+  revealNodes.forEach((node) => observer.observe(node));
+}
+
+function initializeSkillClusters() {
+  const clusterButtons = document.querySelectorAll(".cluster-toggle");
+
+  clusterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded") === "true";
+      const panelId = button.getAttribute("aria-controls");
+      const panel = panelId ? document.getElementById(panelId) : null;
+
+      if (!panel) {
+        return;
+      }
+
+      button.setAttribute("aria-expanded", String(!expanded));
+      panel.hidden = expanded;
+    });
+  });
+}
+
+function initializeBackToTop() {
+  if (!backToTop) {
+    return;
+  }
+
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("show", window.scrollY > 380);
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+initializeTheme();
+initializeTyping();
+initializeRevealAnimations();
+initializeSkillClusters();
+initializeBackToTop();
