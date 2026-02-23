@@ -279,7 +279,8 @@
           <h2>Tell me what is blocking your users today.</h2>
           <p>I will reply with a practical approach focused on usability, delivery speed, and system reliability.</p>
         </div>
-        <form action="send_message.php" method="POST" class="contact-form" data-reveal style="--delay: 90ms">
+        <form name="contact" method="POST" data-netlify="true" class="contact-form" data-reveal style="--delay: 90ms">
+          <input type="hidden" name="form-name" value="contact" />
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />
 
@@ -299,8 +300,8 @@
     <div class="container footer-wrap">
       <p>&copy; 2026 Lawrence Mburu</p>
       <div class="social-links" aria-label="Social links">
-        <a href="https://github.com/dashboard" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/lawrencemburu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Mburu45" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/larry-lawre-56042b324/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="https://twitter.com/lawrencemburu" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
